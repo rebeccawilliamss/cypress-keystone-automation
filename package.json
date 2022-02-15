@@ -9,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.4.1"
+    "cypress": "^9.4.1",
+    "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "cypress-xpath": "^1.6.2",
+    "iframe": "^1.0.0"
   }
 }
