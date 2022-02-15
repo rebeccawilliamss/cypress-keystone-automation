@@ -1,3 +1,10 @@
 {
-  "projectId": "tvopyw"
+  "projectId": "tvopyw",
+  "baseUrl": "https://stage-keystone.historicengland.org.uk",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 200000,
+  "pageLoadTimeout": 100000,
+  "requestTimeout": 200000,
+  "responseTimeout": 80000,
+  "SupportFile": "cypress/support/index.js"
 }
