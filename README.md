@@ -1,5 +1,5 @@
-# cypress-keystone-automation
-Cypress automation framework for the Keystone project.
+# cypress-automation-b
+Cypress automation framework.
 
 ## Running tests
 To run tests using Cypress test runner, use npx cypress open
