@@ -1,4 +1,4 @@
-# cypress-automation-b
+# cypress-automation
 Cypress automation framework.
 
 ## Running tests
