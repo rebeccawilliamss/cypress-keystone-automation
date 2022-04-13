@@ -1,6 +1,6 @@
 {
   "projectId": "tvopyw",
-  "baseUrl": "https://stage-keystone.historicengland.org.uk",
+  "baseUrl": "/",
   "chromeWebSecurity": false,
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
