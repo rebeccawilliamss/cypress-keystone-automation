@@ -3,12 +3,12 @@ class HomePage {
 }
 
 const webElements = {
-    loginBtn: '//a[@id="auth-link"]',
+    loginBtn: `//a[contains(text(), 'Login')]`,
     logOutBtn: '//a[contains(text(), "(logoff)")]',
-    manageBtn: '//a[contains(text(), "Manage")]',
-    findBtn: '//li[@class="page-scroll"][3]',
-    newbtn: '//li[@class="page-scroll"][2]',
-    activeBtn: '//li[@class="page-scroll"][1]'
+    manageBtn: `//a[contains(text(), 'Manage')]`,
+    findBtn: `//a[contains(text(), 'Find')]`,
+    activeBtn: `//a[contains(text(), 'Active')]`,
+    newBtn: `//a[contains(text(), 'New')]`
 
 };
 

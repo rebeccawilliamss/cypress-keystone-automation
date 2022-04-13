@@ -2,6 +2,17 @@
   "projectId": "tvopyw",
   "baseUrl": "https://stage-keystone.historicengland.org.uk",
   "chromeWebSecurity": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  },
   "defaultCommandTimeout": 200000,
   "pageLoadTimeout": 100000,
   "requestTimeout": 200000,

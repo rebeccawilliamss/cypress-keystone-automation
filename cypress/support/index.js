@@ -17,6 +17,7 @@
 import './commands';
 require('cypress-xpath');
 import 'cypress-iframe';
+require('cypress-get-table');
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

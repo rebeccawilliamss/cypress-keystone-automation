@@ -16,7 +16,51 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
+const fs = require("fs")
+const { rmdir } = require('fs')
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+on("task", {
+downloadFile: downloadFile,
+readFile: readFile,
+deleteFolder: deleteFolder,
+});
+return config;
+};
+
+
+function downloadFile(testFolder) {
+  // add array
+  const fileNameArray = []
+  fs.readdirSync(testFolder).forEach(file => {
+  console.log(file);
+  // add each file to array (a push?)
+  fileNameArray.push(file)
+  })
+// assert length of array is 1 - Need to figure out
+  console.log(fileNameArray)
+  // take just first object in array
+  const firstArrayElement = fileNameArray[0]
+  console.log(firstArrayElement)
+// return first object of array
+  return firstArrayElement
+}
+
+function readFile(filePath) {
+  const content = fs.readFileSync(filePath, {encoding: "utf8"})
+  return content
+}
+
+function deleteFolder(folderName) {
+  console.log('deleting folder %s', folderName)
+
+  return new Promise((resolve, reject) => {
+    rmdir(folderName, { maxRetries: 10, recursive: true }, (err) => {
+      if (err) {
+        console.error(err)
+        return reject(err)
+      }
+      resolve(null)
+    })
+  })
 }
