@@ -10,17 +10,17 @@ describe('Tests for the auto-populate node function', () => {
 
     beforeEach(() => {
 
-        cy.visit('/graph/076f9381-7b00-11e9-8d6b-80000b44d1d9/function_manager');
+        cy.visit('/');
         cy.viewport(1600,1200);
         Cypress.Cookies.preserveOnce
         ('csrftoken',
         'arches');
-        action.loginThroughFunctionPage('RWilliams429', '!Ticket39');
+        action.loginThroughFunctionPage('/', '/');
     })
 
     // HERITAGE ASSET AUTO POPULATE NODE FUNCTION TESTS
 
-    it('can set and use a Heritage Asset Construction Phase autopopulate node function', () => {
+    it('can set and use an Asset Construction Phase autopopulate node function', () => {
 
         cy.xpath(funcManager.autoPopNodeFunc)
         .click();
@@ -61,7 +61,7 @@ describe('Tests for the auto-populate node function', () => {
         resAction.validateIframeText(`Agricultural Building, Handbuilt, 1540, 1541, Destroyed Monument, Construction, Brickwork, Earth Mix, Earth Mix`);
 
         cy.log('*** Delete the function configuration ***')
-        cy.visit('/graph/076f9381-7b00-11e9-8d6b-80000b44d1d9/function_manager');
+        cy.visit('/');
         cy.get('.rp-edit-buttons')
         .eq(7)
         .click()
@@ -90,7 +90,7 @@ describe('Tests for the auto-populate node function', () => {
         action.typeNameofNode("<Building Name Value>, <Building Number Sub-Street Value>, <Sub-Street Value>, <Building Number Value><Street Value>, <Locality Value>, <Town or City Value>, <County Value>, <Postcode Value>")
         action.configureAndSave();
 
-        cy.visit('https://stage-keystone.historicengland.org.uk/resource/f65644a2-eb11-47c3-b819-ef8d9114600e')
+        cy.visit('/')
         resAction.selectCard('Location Data');
         resAction.selectLocationNode('Geometry');
 
