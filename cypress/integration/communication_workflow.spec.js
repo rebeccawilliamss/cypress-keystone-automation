@@ -15,7 +15,7 @@ describe('The user can create a Communication workflow', () => {
 
         cy.visit('/');
         cy.viewport(1600,1200);
-        cy.login({ username: 'RWilliams429', password: '!Ticket39' });
+        cy.login({ username: '/', password: '/' });
         cy.visit('/plugins/communication-workflow');
         cy.wait(5000);
     })
